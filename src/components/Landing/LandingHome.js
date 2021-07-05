@@ -29,16 +29,17 @@ const LandingHome = () => {
       <nav className={styles.navbar}>
         <div className="container d-flex justify-between align-center">
           <div className="d-flex align-center">
-            <img className={`${styles.logo} mr-8`} src={general_images.logo} alt="" />
+            <img
+              className={`${styles.logo} mr-8`}
+              src={general_images.logo}
+              alt=""
+            />
             <h3>Islom Nuri</h3>
           </div>
-          <div className="d-flex">
+          <div className={styles.navbar_content1}>
             <div className={styles.nav_links}>
               {nav_items.map((i) => (
-                <NavLink
-                  className={styles.nav_link}
-                  to={i.url}
-                >
+                <NavLink className={styles.nav_link} to={i.url}>
                   <span>{i.title}</span>
                 </NavLink>
               ))}
@@ -55,19 +56,30 @@ const LandingHome = () => {
       </nav>
 
       <div className="mt-32">
-        <div className="d-flex justify-between container align-center">
-          <div>
+        <div
+          className={`d-flex justify-between container align-center ${styles.showcase}`}
+        >
+          <div className={`flex-1 ${styles.showcase_content1}`}>
             <h1 className={styles.showcase_title}>
               <span className={styles.site_name}>Islom Nuri</span> Platformasiga{" "}
               <br /> Xush Kelibsiz
             </h1>
-            <p className="mt-16 mb-32">
-            Siz bu sayt orqali islom dini bòyicha bilimlaringizni turli xil testlar yechib hamda hadislar va kitoblardan parchalar o'qish yordamida oshirishingiz mumkin
+            <p className={`mt-16 mb-32 ${styles.site_desc}`}>
+              Siz bu sayt orqali islom dini bòyicha bilimlaringizni turli xil
+              testlar yechib hamda hadislar va kitoblardan parchalar o'qish
+              yordamida oshirishingiz mumkin
             </p>
+            <img
+              src={general_images.showcase_image}
+              className={styles.showcase_image_mobile}
+              alt=""
+              width={500}
+            />
+
             <button className="btn-primary">Test ishlash</button>
           </div>
-          <div>
-            <img src={general_images.showcase_image} alt="" width={800} />
+          <div className={styles.showcase_image}>
+            <img src={general_images.showcase_image} alt="" />
           </div>
         </div>
       </div>
