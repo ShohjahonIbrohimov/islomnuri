@@ -1,0 +1,49 @@
+.navbar {
+  padding: 1.5rem 0;
+}
+
+.logo {
+  width: 35px;
+}
+
+.showcase_title {
+  font-size: 3rem;
+}
+
+.site_name {
+  color: var(--primary-color);
+}
+
+.nav_links {
+  padding: 0 0.7rem;
+}
+
+.nav_link {
+  text-decoration: none;
+  color: black;
+  margin: 0 1.5rem;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.nav_links::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  background-color: #e2e2e2;
+  height: 45px;
+  width: 0.5px;
+  top: 15px;
+}
+
+.nav_link:hover {
+  color: var(--primary-color);
+}
+
+.nav_link:hover svg {
+  fill: var(--primary-color);
+}
+
+.active {
+  color: var(--primary-color);
+}
