@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { general_images } from "../../constants/images";
 import styles from "./styles/LandingHome.module.css";
 import { NavLink, Link } from "react-router-dom";
 import { general_icons } from "../../constants/icons";
+import Modal from "../Reusable/Modal";
 
 const nav_items = [
   {
@@ -24,6 +25,7 @@ const nav_items = [
 ];
 
 const LandingHome = () => {
+  const [open, setopen] = useState(false);
   return (
     <div>
       <nav className={styles.navbar}>
@@ -54,6 +56,15 @@ const LandingHome = () => {
           </div>
         </div>
       </nav>
+      <Modal open={open} setopen={setopen}>
+        <div className={styles.warning}>
+          {general_icons.error}
+          <p className="mt-16">
+            Sayt ustida hozirda ish olib borilmoqda <br /> tez orada saytdan
+            to'laqonli foydalanishingiz mumkin
+          </p>
+        </div>
+      </Modal>
 
       <div className="mt-32">
         <div
@@ -76,7 +87,9 @@ const LandingHome = () => {
               width={500}
             />
 
-            <button className="btn-primary">Test ishlash</button>
+            <button className="btn-primary" onClick={() => setopen(true)}>
+              Test ishlash
+            </button>
           </div>
           <div className={styles.showcase_image}>
             <img src={general_images.showcase_image} alt="" />

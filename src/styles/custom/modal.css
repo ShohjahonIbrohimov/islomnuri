@@ -1,0 +1,89 @@
+.shadow {
+  z-index: 100;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100vh;
+  background: #0000001c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal_close_btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.modal_close_btn svg {
+  fill: rgb(182, 182, 182);
+  width: 20px;
+  height: 20px;
+}
+
+.main-modal {
+  box-shadow: 1px 1px 5px 0 #0000002b;
+  position: relative;
+  width: 85%;
+  max-width: 560px;
+  min-height: 500px;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+.hideModal {
+  z-index: -1;
+  opacity: 0;
+}
+
+.showModal {
+  opacity: 1;
+  z-index: 100;
+  animation: show 0.2s;
+  transform: scale(1);
+}
+
+@keyframes show {
+  from {
+    transform: scale(0);
+    opacity: 0;
+    z-index: -1;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+    z-index: 2;
+  }
+}
+
+/* modal input icon */
+
+.card-input {
+  position: relative;
+}
+
+.card-input input {
+  padding-left: 56px;
+}
+
+.card-input-icon {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.card-input-icon img {
+  width: 100%;
+  height: 100%;
+}

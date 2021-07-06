@@ -20,6 +20,16 @@
   cursor: pointer;
 }
 
+.icon_wrap {
+  padding: 0.2rem;
+  background: #f7f7f7;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
 @import url("./utilities/buttons.css");
 @import url("./utilities/flexbox.css");
 @import url("./utilities/sizes.css");
