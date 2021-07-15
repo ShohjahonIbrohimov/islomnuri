@@ -1,0 +1,16 @@
+.category_wrapper {
+  width: 90%;
+}
+
+.category_card {
+  background-color: #f7f7f7;
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: start;
+}
+
+@media (max-width: 560px) {
+  .category_wrapper {
+    width: 100%;
+  }
+}

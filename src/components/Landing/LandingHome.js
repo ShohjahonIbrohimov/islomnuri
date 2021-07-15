@@ -4,7 +4,7 @@ import styles from "./styles/LandingHome.module.css";
 import { NavLink, Link } from "react-router-dom";
 import { general_icons } from "../../constants/icons";
 import Modal from "../Reusable/Modal";
-
+import HomeModalContent from "./HomeModalContent";
 const nav_items = [
   {
     title: "Manbalar",
@@ -41,13 +41,14 @@ const LandingHome = () => {
           <div className={styles.navbar_content1}>
             <div className={styles.nav_links}>
               {nav_items.map((i) => (
-                <NavLink className={styles.nav_link} to={i.url}>
+                <NavLink key={i.title} className={styles.nav_link} to={i.url}>
                   <span>{i.title}</span>
                 </NavLink>
               ))}
             </div>
             <div>
               <Link
+                to=""
                 className={`d-flex align-center align-center ${styles.nav_link}`}
               >
                 <span className="mr-8">Kirish</span> {general_icons.login}
@@ -57,13 +58,7 @@ const LandingHome = () => {
         </div>
       </nav>
       <Modal open={open} setopen={setopen}>
-        <div className={styles.warning}>
-          {general_icons.error}
-          <p className="mt-16">
-            Sayt ustida hozirda ish olib borilmoqda <br /> tez orada saytdan
-            to'laqonli foydalanishingiz mumkin
-          </p>
-        </div>
+        <HomeModalContent />
       </Modal>
 
       <div className="mt-32">

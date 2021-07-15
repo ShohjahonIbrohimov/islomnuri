@@ -24,11 +24,12 @@ export const arrayToFormData = (data) => {
   return formData;
 };
 
-export const getValueLabel = (data) => {
+export const getValueLabel = (data, value, label, id) => {
   return data.map((item) => {
     return {
-      value: item.id,
-      label: item.name,
+      value: item[value],
+      label: item[label],
+      id: item[id],
     };
   });
 };

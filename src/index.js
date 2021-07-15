@@ -11,7 +11,7 @@ import { PersistGate } from "redux-persist/integration/react";
 import { BrowserRouter as Router } from "react-router-dom";
 // STYLES
 import "./styles/main.css";
-
+import "boxicons";
 
 ReactDOM.render(
   <Router>
